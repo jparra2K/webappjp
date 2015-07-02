@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Configuration;
 
 namespace WebAppJP.Controllers
 {
@@ -10,6 +11,10 @@ namespace WebAppJP.Controllers
     {
         public ActionResult Index()
         {
+            // Another way
+            //ViewBag.Env = Environment.GetEnvironmentVariable("APPSETTING_SLOT_SETTING");
+            ViewBag.Env = ConfigurationManager.AppSettings["SLOT_SETTING"];
+
             return View();
         }
 

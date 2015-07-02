@@ -29,6 +29,8 @@ namespace WebAppJP.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            throw new Exception("Something nasty just happened!");
+
             return View();
         }
     }
